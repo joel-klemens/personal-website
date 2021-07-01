@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SideNavBar from './Components/SideNavBar.js';
+import SideNavBar from './Components/Navbar/TopNavBar.js';
 import GlobalStyles from './Styles/GlobalStyles.js';
 import styled from 'styled-components';
 import HomePage from "./pages/HomePage";
@@ -24,30 +24,9 @@ const MainContentStyled = styled.main`
   }
 `;
 
-//arrow guy stuff
-// function ArrowGuy() {
-//   const [mousePosition, setMousePosition] = useState({
-//       x: null,
-//       y: null
-//   });
-
-//   useEffect(() => {
-//       function handle(e){
-//           setMousePosition({
-//               x: e.pageX,
-//               y: e.pageY
-//           });
-//       }
-//       document.addEventListener("mousemove", handle );
-//       return () => document.removeEventListener("mousemove", handle );
-//   })
-//   return mousePosition;
-// }
-
 //App function - 
 function App() {
-  //needed for arrow guy
-  //const {x,y} = ArrowGuy();
+
   return (
     <div className="App">
       <SideNavBar />

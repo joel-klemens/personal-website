@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
-import portrait from '../images/pirate-hat.JPG'
+import portrait from '../../images/canoe-algonquin.JPG'
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
 import ListAltIcon from '@material-ui/icons/ListAlt';
@@ -16,14 +16,12 @@ const NavStyled = styled.nav`
     width: 100%;
     border-right: 1px solid var(--border-color);
     .avatar{
-        width: 100%;
-        border-bottom: 1px solid var(--border-color);
-        text-align: center;
-        padding: 1rem 0;
+        height: 8rem;
+        width: 130px;
+        margin-top: 7px;
         img{
-            width: 70%;
-            border-radius: 50%;
-            border: 8px solid var(--border-color);
+            width: 100%;
+            border-radius: 100%;
         }
     }
     .nav-items{
@@ -106,9 +104,9 @@ function Nav() {
                     <NavLink to="/contact" activeClassName="active-class" exact><PersonIcon className="icon"/>Contact</NavLink>
                 </li>
             </ul>
-            <footer className="footer">
-                <p><b>Joel Klemens</b> - 2021 </p>
-            </footer>
+            <div className="menu">
+                <p>Menu Button</p>
+            </div>
         </NavStyled>
     )
 }
