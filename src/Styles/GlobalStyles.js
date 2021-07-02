@@ -82,11 +82,11 @@ html, body {
     color: var(--font-light-color);
 }
 a{
-font-family: inherit;
-color: inherit;
-font-size: inherit;
-font-size: 1rem;
-text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-size: 1rem;
+    text-decoration: none;
 }
 span{
     color: var(--primary-color);

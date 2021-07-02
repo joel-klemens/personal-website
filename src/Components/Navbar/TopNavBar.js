@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Nav from './Nav'
 
-const SideNavBarStyled = styled.div`
+const TopNavBarStyled = styled.div`
     width: 100vw;
     position: fixed;
     display: flex;
@@ -10,7 +10,6 @@ const SideNavBarStyled = styled.div`
     margin: 15px;
     margin-top: 15px;
     z-index: 100;
-    height: 10rem;
     background-color: transparent;
     overflow: hidden;
     transition: all .4s ease-in-out;
@@ -24,9 +23,9 @@ const SideNavBarStyled = styled.div`
 
 function SideNavBar() {
     return (
-        <SideNavBarStyled>
+        <TopNavBarStyled>
             <Nav /> 
-        </SideNavBarStyled>
+        </TopNavBarStyled>
     )
 }
 
