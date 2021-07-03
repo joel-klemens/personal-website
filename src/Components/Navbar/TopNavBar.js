@@ -15,13 +15,13 @@ const TopNavBarStyled = styled.div`
     transition: all .4s ease-in-out;
     transform: translateX(0);
     z-index: 20;
-    @media screen and (max-width:1200px){
+    @media screen and (max-width:1000px){
         transform: translateX(-100%);
         z-index: 20;
     }
 `;
 
-function SideNavBar() {
+function TopNavBar() {
     return (
         <TopNavBarStyled>
             <Nav /> 
@@ -29,4 +29,4 @@ function SideNavBar() {
     )
 }
 
-export default SideNavBar;
+export default TopNavBar;

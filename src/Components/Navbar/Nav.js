@@ -53,13 +53,30 @@ const NavStyled = styled.nav`
         display: flex;
         justify-content: flex-end;
         text-transform: uppercase;
-        margin-top: 17px;
+        margin-top: 9px;
+        .active-class{
+            color: black;
+            font-weight: 700;
+        }
         p{
             text-transform: uppercase;
             transition: all .4s ease-in-out;
             letter-spacing: 1px;
             margin: 10px;
             font-weight: 600;
+            a{
+                text-transform: uppercase;
+                transition: all .4s ease-in-out;
+                letter-spacing: 1px;
+                //margin: 10px;
+                margin-right: 30px;
+                font-weight: 600;
+                .icon{
+                    //display: none;
+                    margin-right: 5px;
+                    vertical-align: sub;
+                }
+            }
         }
     }
 `;
@@ -86,12 +103,11 @@ function Nav() {
                 <p>
                     <NavLink to="/papers" activeClassName="active-class" exact><ListAltIcon className="icon"/> Papers</NavLink>
                 </p>
+            </div>
+            <div className="nav-items-right">
                 <p>
                     <NavLink to="/contact" activeClassName="active-class" exact><PersonIcon className="icon"/>Contact</NavLink>
                 </p>
-            </div>
-            <div className="nav-items-right">
-                <p>Menu Button</p>
             </div>
         </NavStyled>
     )
