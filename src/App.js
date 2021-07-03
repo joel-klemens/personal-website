@@ -10,7 +10,7 @@ import Section from './Components/Section';
 //images
 import hikeFernie from './images/hike-fernie.jpg';
 import hikeFernieLedge from './images/hike-fernie-ledge.JPG';
-import surfSunset from './images/surf-sunset.JPG';
+import surfSunset from './images/surf-sunset-2.JPG.png';
 import climbing from './images/climbing.jpg'
 //import Switch from '@material-ui/core/Switch';
 import { Route, Switch as Switching } from "react-router";

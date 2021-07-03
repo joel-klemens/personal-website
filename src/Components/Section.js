@@ -26,13 +26,13 @@ const SectionStyled = styled.header`
             margin-top: 20%;
             display: flex;
             flex-direction: column;
-            font-size: 34px;
+            font-size: 44px;
             color: black;
             align-items: center;
             flex: 1;
             .section-description{
-                font-weight: 200;
-                font-size: 14px;
+                font-weight: 500;
+                font-size: 20px;
             }
         }
         .lower-third{
@@ -45,15 +45,14 @@ const SectionStyled = styled.header`
             .scroll-down{
                 color: black;
                 width: 100%;
-                margin-top: 3%;
                 justify-content: center;
                 align-items: center;
                 .MuiSvgIcon-root{
                     display: block;
                     margin: auto;
                     justify-content: center;
-                    width: 2em;
-                    height: 2em;
+                    width: 2.5em;
+                    height: 2.5em;
                 }
             }
         }
