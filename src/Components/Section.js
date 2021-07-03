@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 // images
-import pointer from '../images/pointer.png'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Button } from '@material-ui/core'
+//icons
+import GithubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const SectionStyled = styled.header`
     .section{
@@ -39,8 +41,44 @@ const SectionStyled = styled.header`
             margin-bottom: 5%;
             display: flex;
             flex-direction: column;
-            .section-buttons{
+            .link-icons{
                 display: flex;
+                justify-content: center;
+                margin-top: 1rem;
+                color: black;
+                .link-icon{
+                    border: 2px solid black;
+                    position: relative;
+                    top: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: all .4s ease-in-out;
+                    cursor: pointer;
+                    &:hover{
+                        border: 2px solid black;
+                        color: black;
+                    }
+                    &:not(:last-child){
+                        margin-right: 5rem;
+                    }
+                    svg{
+                        margin: .75rem;
+                    }
+                }
+                .i-github{
+                    &:hover{
+                        border: 2px solid #6f42c1;
+                        color: #6f42c1;
+                    }
+                }
+                .i-linkedin{
+                    &:hover{
+                        border: 2px solid #0a66c2;
+                        color: #0a66c2;
+                    }
+                }
             }
             .scroll-down{
                 color: black;
@@ -60,7 +98,7 @@ const SectionStyled = styled.header`
 `;
 
 //these are going to be the main sections on the homepage 
-const section = ({title, desc, backgroundimg, first, mePointer}) => {
+const section = ({title, desc, backgroundimg, first, gitHubLinkedIn}) => {
     return (
         <SectionStyled>
             <div className="section" style={{ backgroundImage: `url(${backgroundimg})` }}>
@@ -71,14 +109,18 @@ const section = ({title, desc, backgroundimg, first, mePointer}) => {
                             <p>{desc}</p>
                         </div>
                     </div>
-                    {/* {mePointer && (
-                        <div className="me-pointer">
-                            <img src={pointer} alt="Arrow pointing at me"/>
-                        </div>
-                    )} */}
                     <div className="lower-third">
                         <div className="section-buttons">
-                            <Button /> 
+                            {gitHubLinkedIn && (
+                                <div className ="link-icons">
+                                    <a href="https://github.com/joel-klemens" className="link-icon i-github">
+                                        <GithubIcon /> 
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/joel-klemens-09242a185" className="link-icon i-linkedin">
+                                        <LinkedInIcon /> 
+                                    </a>
+                                </div>
+                            )}
                         </div>
                         {/* If this is the first section on the page */}
                         {first && (

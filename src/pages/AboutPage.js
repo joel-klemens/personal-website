@@ -1,22 +1,23 @@
 import React from 'react'
 import styled from 'styled-components';
-import AboutInfo from '../Components/AboutInfo';
-import Title from '../Components/Title';
-import {MainLayout} from '../Styles/Layout';
+import Section from '../Components/Section'; 
+//images
+import hikeFernie from '../images/hike-fernie.jpg';
+
+const AboutStyled = styled.div``;
 
 function AboutPage() {
     return (
-        <MainLayout>
-            <AboutStyled >
-                <Title title={'About Me'} span={'About Me'} />
-                <AboutInfo />
-            </AboutStyled >
-        </MainLayout>
+        <AboutStyled >
+             {/* About */}
+            <Section 
+                title="About me"
+                desc="Learn what I'm about"
+                backgroundimg={hikeFernie}
+                first
+            />
+        </AboutStyled >
     )
 }
-
-const AboutStyled = styled.section`
-    
-`;
 
 export default AboutPage;

@@ -28,6 +28,10 @@ const NavStyled = styled.nav`
         .active-class{
             color: black;
             font-weight: 700;
+            border-radius: 28px;
+            background-color: rgba(0,0,0,0.2);
+            padding: 7px;
+            padding-top: 9px;
         }
         p{
             a{
@@ -57,6 +61,10 @@ const NavStyled = styled.nav`
         .active-class{
             color: black;
             font-weight: 700;
+            border-radius: 28px;
+            background-color: rgba(0,0,0,0.2);
+            padding: 7px;
+            padding-top: 9px;
         }
         p{
             text-transform: uppercase;
