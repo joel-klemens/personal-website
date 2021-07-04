@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 // images
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Button } from '@material-ui/core'
 //icons
 import GithubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -98,10 +97,10 @@ const SectionStyled = styled.header`
 `;
 
 //these are going to be the main sections on the homepage 
-const section = ({title, desc, backgroundimg, first, gitHubLinkedIn}) => {
+const section = ({sectionID, title, desc, backgroundimg, first, gitHubLinkedIn}) => {
     return (
         <SectionStyled>
-            <div className="section" style={{ backgroundImage: `url(${backgroundimg})` }}>
+            <div className="section" id={sectionID} style={{ backgroundImage: `url(${backgroundimg})` }}>
                 <div className='section-container'>
                     <div className="section-text">
                         <p>{title}</p>

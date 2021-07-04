@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Component } from "react"
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
+import {Link} from 'react-scroll'
+//logo image
 import logo from '../../images/logo.png'
+//icons
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import PersonIcon from '@material-ui/icons/Person';
+
 
 const NavStyled = styled.nav`
     display: flex;
@@ -89,36 +93,41 @@ const NavStyled = styled.nav`
     }
 `;
 
-function Nav() {
-    return (
-        <NavStyled>
-            <div className="nav-logo">
-                <img src={logo} alt="Joel Klemens Logo"/>
-            </div>
-            <div className="nav-items">
-                <p>
-                    <NavLink to="/" activeClassName="active-class" exact><HomeIcon className="icon"/>Home</NavLink>
-                </p>
-                <p>
-                    <NavLink to="/about" activeClassName="active-class" exact><InfoIcon className="icon"/>About</NavLink>
-                </p>
-                <p>
-                    <NavLink to="/resume" activeClassName="active-class" exact><ListAltIcon className="icon"/> Resume</NavLink>
-                </p>
-                <p>
-                    <NavLink to="/projects" activeClassName="active-class" exact><ListAltIcon className="icon"/> Projects</NavLink>
-                </p>
-                <p>
-                    <NavLink to="/papers" activeClassName="active-class" exact><ListAltIcon className="icon"/> Papers</NavLink>
-                </p>
-            </div>
-            <div className="nav-items-right">
-                <p>
-                    <NavLink to="/contact" activeClassName="active-class" exact><PersonIcon className="icon"/>Contact</NavLink>
-                </p>
-            </div>
-        </NavStyled>
-    )
+class Nav extends Component{
+    render() {
+        return (
+            <NavStyled>
+                <div className="nav-logo">
+                <NavLink to="/"exact><img src={logo} alt="Joel Klemens Logo"/></NavLink>
+                </div>
+                <div className="nav-items">
+                    <p>
+                        <NavLink to="/" activeClassName="active-class" exact><HomeIcon className="icon"/>Home</NavLink>
+                    </p>
+                    {/* <p>
+                        <NavLink to="/about" activeClassName="active-class" exact><InfoIcon className="icon"/>About</NavLink>
+                        <Link to="about" activeClass="active-class" spy={true} smooth={true} offset={50} duration={500}>
+                            <InfoIcon className="icon"/>About
+                        </Link>
+                    </p> */}
+                    <p>
+                        <NavLink to="/resume" activeClassName="active-class" exact><InfoIcon className="icon"/> Resume</NavLink>
+                    </p>
+                    <p>
+                        <NavLink to="/projects" activeClassName="active-class" exact><ListAltIcon className="icon"/> Projects</NavLink>
+                    </p>
+                    <p>
+                        <NavLink to="/papers" activeClassName="active-class" exact><ListAltIcon className="icon"/> Papers</NavLink>
+                    </p>
+                </div>
+                <div className="nav-items-right">
+                    <p>
+                        <NavLink to="/contact" activeClassName="active-class" exact><PersonIcon className="icon"/>Contact</NavLink>
+                    </p>
+                </div>
+            </NavStyled>
+        )
+    }
 }
 
 export default Nav;
