@@ -21,6 +21,7 @@ const AboutInfoStyled = styled.div`
         .card{
             height: 22vh;
             margin-bottom: 5px;
+            width: 100%;
         }
     }
 `;

@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
 --pale-spring-bud: #d4dd9fff;
 --dark-jungle-green-2: #232720ff;
 --rocket-metallic: #847e7dff;
+--grullo: #958f7bff;
+--blue-yonder: #5674a6ff;
+--black-olive: #363d37ff;
+--grullo-2: #958f7bff;
 
 /* CSS HSL */
 --laurel-green: hsla(68, 24%, 74%, 1);

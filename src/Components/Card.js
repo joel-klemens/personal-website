@@ -22,6 +22,15 @@ const CardStyled = styled.header`
             margin-top: 10%; 
             text-align: left;
         }
+        @media screen and (max-width:1000px){
+            .card-title{
+                font-size: 24px;
+            }
+            .card-description{
+                margin-top: 0%;
+                font-size: 15px;;
+            }
+        }
     }
 `; 
 

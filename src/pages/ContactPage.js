@@ -7,7 +7,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Title from '../Components/Title'
-
+//for accessing api to send emails 
 import Axios from 'axios';
 
 const ContactPageStyled = styled.section`
@@ -51,8 +51,11 @@ class ContactPage extends React.Component {
             disabled: true
         });
 
+            //this is the full api call running locally uncomment when running on actual domain
+        //Axios.post('http://joelklemens.com/api/email', this.state)
         Axios.post('http://localhost:3030/api/email', this.state)
             .then(res => {
+                //email sending logic 
                 if(res.data.success) {
                     this.setState({
                         disabled: false,
@@ -67,7 +70,6 @@ class ContactPage extends React.Component {
             })
             .catch(err => {
                 console.log(err);
-
                 this.setState({
                     disabled: false,
                     emailSent: false
