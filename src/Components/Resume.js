@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import {InnerLayout} from '../Styles/Layout';
 import Title from '../Components/Title';
 import SmallTitle from '../Components/SmallTitle';
+import ResumeItem from '../Components/ResumeItem';
+
+//materia ui 
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import SchoolIcon from '@material-ui/icons/School';
 import PanToolIcon from '@material-ui/icons/PanTool';
-import ResumeItem from '../Components/ResumeItem';
 
 const ResumeStyled = styled.section`
     .small-title{

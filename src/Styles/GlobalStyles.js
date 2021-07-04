@@ -62,7 +62,7 @@ $gradient-radial: radial-gradient(#c8ccacff, #232720ff, #dee5f7ff, #d4dd9fff, #2
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3,127,255,.3);
     --white-color: #FFF;
-    --font-light-color: #a4acc4;
+    --font-light-color: #606060;
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #191D2B;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const TitleStyled = styled.div`
     position: relative;
     h2{
-        color: var(--primary-color);
+        color: var(--dark-jungle-green);
         font-size: 3.1rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -22,7 +22,7 @@ const TitleStyled = styled.div`
             bottom: 0;
             width: 7.4rem;
             height: .33rem;
-            background-color: var(--background-light-color-2);
+            background-color: var(--rocket-metallic);
             border-radius: 15px;
             left: 0;
         }
@@ -32,7 +32,7 @@ const TitleStyled = styled.div`
             bottom: 0;
             width: 3.5rem;
             height: .33rem;
-            background-color: var(--primary-color);
+            background-color: var(--dark-jungle-green);
             border-radius: 15px;
             left: 0;
         }

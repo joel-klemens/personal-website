@@ -11,7 +11,7 @@ const SmallTitleStyled = styled.div`
         }
     }
     h3{
-        color: var(--primary-color);
+        color: var(--rocket-metallic);
         font-size: 2rem;
     }
 `;

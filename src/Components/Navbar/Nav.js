@@ -58,10 +58,12 @@ const NavStyled = styled.nav`
         }
     }
     .nav-items-right{
+        width: 200px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: left;
         text-transform: uppercase;
         margin-top: 9px;
+        margin-right: 35px;
         .active-class{
             color: black;
             font-weight: 700;

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styled from 'styled-components';
 import Section from '../Components/Section'; 
 //images
-import hikeFernie from '../images/hike-fernie.jpg';
+import hikeFernie from '../images/climbing.jpg';
 
 const AboutStyled = styled.div``;
 
@@ -16,7 +16,7 @@ class AboutPage extends Component{
                     title="About me"
                     desc="Learn what I'm about"
                     backgroundimg={hikeFernie}
-                    first
+                    aboutMe
                 />
             </AboutStyled >
         )

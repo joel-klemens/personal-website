@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import AboutInfo from '../Components/AboutInfo'
 // images
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 //icons
@@ -16,15 +17,15 @@ const SectionStyled = styled.header`
         display: flex;
         justify-content: center;
         scroll-snap-align: start;
-        }
+    }
     .section-container{
         width: 40vw;
         display: flex;
         flex-direction: column;
         align-items: center;
-
         .section-text{
-            margin-top: 20%;
+            text-align: center;
+            margin-top: 25%;
             display: flex;
             flex-direction: column;
             font-size: 44px;
@@ -97,7 +98,7 @@ const SectionStyled = styled.header`
 `;
 
 //these are going to be the main sections on the homepage 
-const section = ({sectionID, title, desc, backgroundimg, first, gitHubLinkedIn}) => {
+const section = ({sectionID, title, desc, backgroundimg, first, gitHubLinkedIn, aboutMe}) => {
     return (
         <SectionStyled>
             <div className="section" id={sectionID} style={{ backgroundImage: `url(${backgroundimg})` }}>
@@ -107,6 +108,9 @@ const section = ({sectionID, title, desc, backgroundimg, first, gitHubLinkedIn})
                         <div className="section-description">
                             <p>{desc}</p>
                         </div>
+                        {aboutMe && (
+                            <AboutInfo /> 
+                        )}
                     </div>
                     <div className="lower-third">
                         <div className="section-buttons">

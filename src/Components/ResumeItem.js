@@ -44,7 +44,7 @@ const ResumeItemStyled = styled.div`
             background-color: var(--border-color);
         }
         h5{
-            color: var(--primary-color);
+            color: var(--dark-jungle-green-2);
             font-size: 2rem;
             padding-bottom: .4rem;
         }
