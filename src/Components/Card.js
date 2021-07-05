@@ -5,7 +5,7 @@ const CardStyled = styled.header`
     height: 100%;
     .card-body{
         height: 100%;
-        background: rgba(255,255,255,0.6);
+        background: rgb(121 90 58 / 60%);;
         box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.25);
         border-radius: 20px;
         margin: 10px;
@@ -21,6 +21,7 @@ const CardStyled = styled.header`
             vertical-align: center;
             margin-top: 10%; 
             text-align: left;
+           // color: #c7935e;
         }
         @media screen and (max-width:1000px){
             .card-title{

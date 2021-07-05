@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
 --blue-yonder: #5674a6ff;
 --black-olive: #363d37ff;
 --grullo-2: #958f7bff;
+//for about page cards
+--organish: #c7935e;
+--dark-transparent: rgb(62 49 36 / 60%); 
+
+//color from spotify
+--spotify: #181a1b;
 
 /* CSS HSL */
 --laurel-green: hsla(68, 24%, 74%, 1);
