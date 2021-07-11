@@ -5,14 +5,14 @@ const CardStyled = styled.header`
     height: 100%;
     .card-body{
         height: 100%;
-        background: rgb(121 90 58 / 60%);;
+        background: rgb(64 45 25 / 60%);
         box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.25);
         border-radius: 20px;
         margin: 10px;
         padding: 10px;
         .card-title{
             font-size: 40px;
-            color: black;
+            color: #f5c68b;
             text-align: left;
         }
         .card-description{
@@ -21,7 +21,7 @@ const CardStyled = styled.header`
             vertical-align: center;
             margin-top: 10%; 
             text-align: left;
-           // color: #c7935e;
+            color: #f5c68b;
         }
         @media screen and (max-width:1000px){
             .card-title{

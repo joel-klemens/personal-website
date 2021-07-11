@@ -26,7 +26,7 @@ const MainContentStyled = styled.main`
 	}
 `;
 
-//App function - 
+//App function - gets passed to the render in the index.js 
 function App() {
 	return (
 		<div className="App">
