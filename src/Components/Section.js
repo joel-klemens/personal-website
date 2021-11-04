@@ -19,7 +19,7 @@ const SectionStyled = styled.header`
         scroll-snap-align: start;
     }
     .section-container{
-        width: 40vw;
+        width: 40%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -93,6 +93,16 @@ const SectionStyled = styled.header`
                     height: 2.5em;
                 }
             }
+        }
+    }
+    @media screen and (max-width: 1354px) {
+        .section-container {
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 560px) {
+        .section-container {
+            width: 95%;
         }
     }
 `;
