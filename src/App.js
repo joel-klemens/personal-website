@@ -31,16 +31,16 @@ const MainContentStyled = styled.main`
 function App() {
 	return (
 		<div className="App">
-			<TopNavBar />
+			{/* <TopNavBar /> */}
 			<MainContentStyled>
 				<Switching>
 					<Route path="/" exact>
 						<div className="main-sectionsContainer">
 							<HomePage/>
-							<AboutPage/>
+							{/* <AboutPage/> */}
 						</div>
 					</Route>
-					<Route path="/resume" exact>
+					{/* <Route path="/resume" exact>
 						<ResumePage />
 					</Route>
 					<Route path="/projects" exact>
@@ -51,7 +51,7 @@ function App() {
 					</Route>
 					<Route path="/contact" exact>
 						<ContactPage />
-					</Route>
+					</Route> */}
 				</Switching>
 			</MainContentStyled>
 		</div>
