@@ -21,7 +21,8 @@ const MainContentStyled = styled.main`
 	}
 	.main-sectionsContainer{
 		scroll-snap-type: y mandatory;
-		overflow: auto;
+		overflow-y: auto;
+		overflow-x: hidden;
 		height: 100vh;
 	}
 `;

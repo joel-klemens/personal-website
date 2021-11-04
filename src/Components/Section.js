@@ -10,7 +10,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const SectionStyled = styled.header`
     .section{
         height: 100vh;
-        width: 99.1vw;
+        width: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
