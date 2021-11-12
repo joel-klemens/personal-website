@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useMemo, useEffect } from "react";
 import TopNavBar from './Components/Navbar/TopNavBar.js';
 import styled from 'styled-components';
 import HomePage from "./pages/HomePage";
@@ -6,11 +6,24 @@ import AboutPage from './pages/AboutPage';
 import ResumePage from './pages/ResumePage';
 import ContactPage from './pages/ContactPage';
 import { Route, Switch as Switching } from "react-router";
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import  { Auth } from 'aws-amplify';
+import SignIn from './pages/SignIn.js';
+import { UserContext } from './Components/Context/UserContext'
+
+Amplify.configure(awsconfig);
 
 //main content styles
 const MainContentStyled = styled.main`
 	position: relative;
-	min-height: 100vh;
+	scroll-snap-type: y mandatory;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	overflow-y: auto;
+	overflow-x: hidden;
 	background-color: --background-dark-color;
 	@media screen and (max-width:1200px){
 		margin-left: 0;
@@ -20,42 +33,71 @@ const MainContentStyled = styled.main`
 		height: 50%;
 	}
 	.main-sectionsContainer{
-		scroll-snap-type: y mandatory;
+		/* scroll-snap-type: y mandatory;
 		overflow-y: auto;
-		overflow-x: hidden;
-		height: 100vh;
+		overflow-x: hidden; */
+		//height: 100vh;
 	}
 `;
 
 //App function - gets passed to the render in the index.js 
 function App() {
-	return (
-		<div className="App">
-			<TopNavBar />
-			<MainContentStyled>
-				<Switching>
-					<Route path="/" exact>
-						<div className="main-sectionsContainer">
-							<HomePage/>
-							<AboutPage/>
-						</div>
-					</Route>
-					<Route path="/resume" exact>
-						<ResumePage />
-					</Route>
-					<Route path="/projects" exact>
-						<ContactPage />
-					</Route>
-					<Route path="/papers" exact>
-						<ContactPage />
-					</Route>
-					<Route path="/contact" exact>
-						<ContactPage />
-					</Route>
-				</Switching>
-			</MainContentStyled>
-		</div>
-	);
-	}
+	//user context 
+	const [loggedIn, setloggedIn] = useState(false);  
+	const value = useMemo(() => ({ loggedIn, setloggedIn}), [loggedIn, setloggedIn]); 
 
+	//find out if the user is logged in
+	useEffect(() => {
+        AssessLoggedInState() 
+    }, []) 
+	//update logged in state
+    const AssessLoggedInState = () => {
+        Auth.currentAuthenticatedUser()
+            .then(user => {
+                //console.log('set state logged in:',user); 
+                setloggedIn(true);
+            })
+            .catch(() => {
+                //console.log('set state logged out'); 
+                setloggedIn(false); 
+            });
+    };
+	const onSignIn = () => {
+        //console.log('Signed in...')
+        setloggedIn(true); 
+    }
+
+	return (
+		<MainContentStyled>
+			<div className="App">
+				<UserContext.Provider value={value}>
+					<TopNavBar />
+				</UserContext.Provider>
+					<Switching>
+						<Route path="/" exact>
+							<div className="main-sectionsContainer">
+								<HomePage/>
+								<AboutPage/>
+							</div>
+						</Route>
+						<Route path="/resume" exact>
+							<ResumePage />
+						</Route>
+						<Route path="/projects" exact>
+							<ContactPage />
+						</Route>
+						<Route path="/papers" exact>
+							<ContactPage />
+						</Route>
+						<Route path="/signin" exact>
+							<SignIn onSignIn={onSignIn} />
+						</Route>
+						<Route path="/contact" exact>
+							<ContactPage />
+						</Route>
+					</Switching>
+			</div>
+		</MainContentStyled>
+	);
+}
 export default App;

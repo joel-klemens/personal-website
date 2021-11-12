@@ -1,7 +1,7 @@
 import React from 'react';
 import Resume from '../Components/Resume';
 import styled from 'styled-components';
-import bgndImg from '../images/hike-fernie-top.jpg';
+//import bgndImg from '../images/hike-fernie-top.jpg';
 
 const ResumeStyled = styled.div`
     padding: 5rem;
