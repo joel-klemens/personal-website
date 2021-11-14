@@ -12,7 +12,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import PersonIcon from '@material-ui/icons/Person';
 //siging in and out 
-import SignOut from "./signout";
+import SignOut from "../Authentication/SignOut";
 
 const NavStyled = styled.nav`
     display: flex;

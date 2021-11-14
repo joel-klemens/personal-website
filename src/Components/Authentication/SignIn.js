@@ -62,6 +62,7 @@ const SignIn = ({ onSignIn }) => {
                 <Button variant="contained" color="primary" onClick={signIn}>
                     Sign In
                 </Button> 
+                <p>Don't have an account? <a href='/signup'>Sign Up</a></p>
             </div>
         </SignInStyled>
     )

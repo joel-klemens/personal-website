@@ -1,4 +1,5 @@
 
+ 
 AWSTemplateFormatVersion: 2010-09-09
 
 Parameters:
@@ -126,7 +127,6 @@ Parameters:
   userPoolGroupList:
     Type: CommaDelimitedList
       
-            
   serviceName:
     Type: String
   
@@ -139,6 +139,43 @@ Parameters:
   dependsOn:
     Type: CommaDelimitedList
       
+  
+  thirdPartyAuth:
+    Type: String
+            
+  
+  userPoolGroups:
+    Type: String
+            
+  
+  adminQueries:
+    Type: String
+            
+  triggers:
+    Type: String
+  
+            
+  
+  hostedUI:
+    Type: String
+            
+            
+      
+  parentStack:
+    Type: String
+        
+  
+  breakCircularDependency:
+    Type: String
+            
+        
+  permissions:
+    Type: CommaDelimitedList
+      
+        
+  authProviders:
+    Type: CommaDelimitedList
+      
 Conditions:
   ShouldNotCreateEnvResources: !Equals [ !Ref env, NONE ]
   
@@ -146,6 +183,7 @@ Conditions:
   
 
 Resources:
+  
   
   
   # BEGIN SNS ROLE RESOURCE
@@ -177,6 +215,7 @@ Resources:
                 Action:
                   - "sns:Publish"
                 Resource: "*"
+   
   # BEGIN USER POOL RESOURCES
   UserPool:
   # Created upon user selection
@@ -212,20 +251,23 @@ Resources:
       Policies:
         PasswordPolicy:
           MinimumLength: !Ref passwordPolicyMinLength
-          RequireLowercase: false
-          RequireNumbers: false
+          RequireLowercase: true
+          RequireNumbers: true
           RequireSymbols: false
-          RequireUppercase: false
+          RequireUppercase: true
       
       UsernameAttributes: !Ref usernameAttributes
       
       
       MfaConfiguration: !Ref mfaConfiguration
+        
+       
       SmsVerificationMessage: !Ref smsVerificationMessage
       SmsAuthenticationMessage: !Ref smsAuthenticationMessage
       SmsConfiguration:
         SnsCallerArn: !GetAtt SNSRole.Arn
         ExternalId: persond1f6274c_role_external_id
+      
     
   
   UserPoolClientWeb:
@@ -423,6 +465,10 @@ Outputs :
   AppClientSecret:
     Value: !GetAtt UserPoolClientInputs.appSecret
     Condition: ShouldOutputAppClientSecrets
+  
+  CreatedSNSRole:
+    Value: !GetAtt SNSRole.Arn
+    Description: role arn
   
   
   

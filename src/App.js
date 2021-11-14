@@ -9,7 +9,8 @@ import { Route, Switch as Switching } from "react-router";
 import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 import  { Auth } from 'aws-amplify';
-import SignIn from './pages/SignIn.js';
+import SignIn from './Components/Authentication/SignIn.js';
+import SignUp from "./Components/Authentication/SignUp.js";
 import { UserContext } from './Components/Context/UserContext'
 
 Amplify.configure(awsconfig);
@@ -91,6 +92,9 @@ function App() {
 						</Route>
 						<Route path="/signin" exact>
 							<SignIn onSignIn={onSignIn} />
+						</Route>
+						<Route path="/signup" exact>
+							<SignUp />
 						</Route>
 						<Route path="/contact" exact>
 							<ContactPage />
