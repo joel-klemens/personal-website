@@ -10,6 +10,7 @@ import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 import  { Auth } from 'aws-amplify';
 import SignIn from './Components/Authentication/SignIn.js';
+import SignInPage from "./Components/Authentication/SignInPage.js";
 import SignUp from "./Components/Authentication/SignUp.js";
 import { UserContext } from './Components/Context/UserContext'
 
@@ -91,7 +92,7 @@ function App() {
 							<ContactPage />
 						</Route>
 						<Route path="/signin" exact>
-							<SignIn onSignIn={onSignIn} />
+							<SignInPage onSignIn={onSignIn} />
 						</Route>
 						<Route path="/signup" exact>
 							<SignUp />

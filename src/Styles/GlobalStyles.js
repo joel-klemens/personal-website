@@ -63,7 +63,7 @@ $gradient-top-left: linear-gradient(225deg, #c8ccacff, #232720ff, #dee5f7ff, #d4
 $gradient-bottom-left: linear-gradient(315deg, #c8ccacff, #232720ff, #dee5f7ff, #d4dd9fff, #232720ff, #847e7dff);
 $gradient-radial: radial-gradient(#c8ccacff, #232720ff, #dee5f7ff, #d4dd9fff, #232720ff, #847e7dff);
 
-    --primary-color: #007bff;
+    --primary-color: #232720ff;
     --primary-color-light: #057FFF;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
