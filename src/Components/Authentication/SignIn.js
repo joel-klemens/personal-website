@@ -5,7 +5,6 @@ import TextField from '@mui/material/TextField';
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import styled from 'styled-components';
-import ParticlesBG from "../Particles-bg";
 
 const SignInStyled = styled.div`
     margin-top: 100px;
@@ -65,6 +64,7 @@ const SignInStyled = styled.div`
     .MuiFormLabel-root.Mui-focused {
         color: black;
     }
+    //border around the username 
     .Mui-focused .MuiOutlinedInput-notchedOutline {
         border-color: black; 
     }
@@ -83,11 +83,15 @@ const SignInStyled = styled.div`
     #username {
         background-image: none;
     }
+    p.invalid-user {
+        color: red;
+    }
 `; 
 
 const SignIn = ({ onSignIn }) => {
     const [username, setUsername] = useState(''); 
     const [password, setPassword] = useState('');
+    const [incorect, setIncorect] = useState(false); 
     const history = useHistory();
     
     const signIn = async() => {
@@ -96,6 +100,7 @@ const SignIn = ({ onSignIn }) => {
             history.push('/'); 
             onSignIn();
         } catch (error) {
+            setIncorect(true); 
             console.log('There was an error logging in: ',error);
         }
     }
@@ -118,6 +123,7 @@ const SignIn = ({ onSignIn }) => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                { incorect ? <p className="invalid-user">You have entered and incorect username or password</p> : <></> } 
                 <Button className="sign-in-button" variant="contained" color="inherit" onClick={signIn}>
                     Sign In
                 </Button>

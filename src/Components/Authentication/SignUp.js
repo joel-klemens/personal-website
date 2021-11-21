@@ -33,21 +33,29 @@ const SignUp = () => {
     const [formState, setformState] = useState('signUp');
     const [username, setUsername] = useState(''); 
     const [password, setPassword] = useState('');
+    const [passwordConfirm, setPasswordConfirm ] = useState('');
+    const [matchingPass, setMatchingPass] = useState(true);
     const [code, setCode] = useState('');
     
     const signUp = async() => {
-        try {
-            const { user } = await Auth.signUp({
-                username,
-                password,
-                attributes: {
-                    // optional
-                    // optional - E.164 number convention
-                    // other custom attributes 
-                }
-            });
-            console.log(user);
-            setformState('verify');
+        try {   
+            //check if the passwords match 
+            if(passwordConfirm === password){
+                const { user } = await Auth.signUp({
+                    username,
+                    password,
+                    attributes: {
+                        // optional
+                        // optional - E.164 number convention
+                        // other custom attributes 
+                    }
+                });
+                console.log(user);
+                setformState('verify');
+            } else {
+                //if they don't put message on screen
+                setMatchingPass(false);
+            }
         } catch (error) {
             console.log('error signing up:', error);
         }
@@ -81,6 +89,14 @@ const SignUp = () => {
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                         />
+                        <TextField
+                            id='passwordConfirm'
+                            label='Confirm Password'
+                            type='password'
+                            value={passwordConfirm}
+                            onChange={e => setPasswordConfirm(e.target.value)}
+                        />
+                        {matchingPass ? <></> : <p className="no-match">Passwords do not match</p> }
                         <Button variant="contained" color="primary" onClick={signUp}>
                             Sign Up
                         </Button> 
