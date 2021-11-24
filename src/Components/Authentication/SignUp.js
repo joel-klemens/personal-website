@@ -1,5 +1,6 @@
 import { Auth } from 'aws-amplify';
-import { Button, TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import TextField from '@mui/material/TextField';
 import React, { useState } from "react";
 import styled from 'styled-components'
 
@@ -7,13 +8,115 @@ const SignUpStyled = styled.div`
     margin-top: 100px;
     margin-left: 20%;
     margin-right: 20%; 
-    .signin {
+    .signUp {
+        height: 520px;
+        width: 400px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
         display: flex;
-        align-content: center;
-        flex-wrap: nowrap;
-        align-items: center;
         flex-direction: column;
-        justify-content: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+    .verify {
+        height: 300px;
+        width: 400px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+    .verified {
+        height: 300px;
+        width: 400px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        h1 {
+            color: #232720ff; 
+            text-align: center;
+        }
+        a {
+            color: white; 
+            background-color: #232720ff;
+            padding: 6px 16px;
+            font-size: 0.875rem;
+            min-width: 64px;
+            box-sizing: border-box;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 1.75;
+            border-radius: 4px;
+            letter-spacing: 0.02857em;
+            text-transform: uppercase;
+            :hover{
+                background-color: #232720ff;
+                transform: scale(1.05);
+            }
+        }
+    }
+    .MuiButtonBase-root{
+        background-color: #232720ff;
+        :hover{
+            background-color: #232720ff;
+            transform: scale(1.05);
+        }
+    }
+    .MuiButton-label {
+        color: white;
+        margin: 10px;
+        background-color:#232720ff;
+    }
+    .MuiTouchRipple-root {
+        background-color:#232720ff;
+        display:none;
+    }
+    .MuiFormLabel-root{
+        color: black; 
+       // font-size: 1.5em;
+    }
+    .MuiFormLabel-root.Mui-focused {
+        color: black;
+    }
+    //border around the username 
+    .Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: black; 
     }
     button {
         margin: 10px;
@@ -24,8 +127,14 @@ const SignUpStyled = styled.div`
     #password {
         margin: 10px;
     }
+    #passwordConfirm {
+        margin: 10px;
+    }
     #email {
         margin: 10px;
+    }
+    .no-match {
+        color: red; 
     }
 `; 
 
@@ -75,7 +184,7 @@ const SignUp = () => {
         <SignUpStyled>
             {
                 formState === 'signUp' && (
-                    <div className="signup">
+                    <div className="signUp">
                         <TextField
                             id='username'
                             label='Email'
@@ -121,7 +230,8 @@ const SignUp = () => {
             {
                 formState === 'verified' && (
                     <div className="verified">
-                        <h1>You have been verified <a href="/signin">click here</a> to sign in!</h1>
+                        <h1>You have been verified </h1>
+                        <a href="/signin">Sign In</a>
                     </div>
                 )
             }

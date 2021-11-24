@@ -1,0 +1,9 @@
+type Recipe @model {
+  id: ID!
+  name: String!
+  description: String!
+  ingredients: String! 
+  instructions: String!
+  like: Int! 
+  owner: String! 
+}
