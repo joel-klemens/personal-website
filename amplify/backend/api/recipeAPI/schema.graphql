@@ -4,6 +4,7 @@ type Recipe @model {
   description: String!
   ingredients: String! 
   instructions: String!
+  filePath: String! 
   like: Int! 
   owner: String! 
 }

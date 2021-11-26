@@ -20,6 +20,7 @@ export const syncRecipes = /* GraphQL */ `
         description
         ingredients
         instructions
+        filePath
         like
         owner
         _version
@@ -41,6 +42,7 @@ export const getRecipe = /* GraphQL */ `
       description
       ingredients
       instructions
+      filePath
       like
       owner
       _version
@@ -64,6 +66,7 @@ export const listRecipes = /* GraphQL */ `
         description
         ingredients
         instructions
+        filePath
         like
         owner
         _version

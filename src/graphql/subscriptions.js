@@ -9,6 +9,7 @@ export const onCreateRecipe = /* GraphQL */ `
       description
       ingredients
       instructions
+      filePath
       like
       owner
       _version
@@ -27,6 +28,7 @@ export const onUpdateRecipe = /* GraphQL */ `
       description
       ingredients
       instructions
+      filePath
       like
       owner
       _version
@@ -45,6 +47,7 @@ export const onDeleteRecipe = /* GraphQL */ `
       description
       ingredients
       instructions
+      filePath
       like
       owner
       _version

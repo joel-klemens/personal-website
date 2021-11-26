@@ -14,6 +14,7 @@ export declare class Recipe {
   readonly description: string;
   readonly ingredients: string;
   readonly instructions: string;
+  readonly filePath: string;
   readonly like: number;
   readonly owner: string;
   readonly createdAt?: string;
