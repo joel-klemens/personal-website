@@ -15,7 +15,7 @@ function HomePage() {
             <Section 
                 sectionID="home"
                 title="Welcome to my site"
-                desc="Scroll down to find out more about me"
+                desc="Scroll down to find more"
                 backgroundimg={surfSunset}
                 first
                 mePointer
