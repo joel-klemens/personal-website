@@ -12,6 +12,7 @@ import  { Auth } from 'aws-amplify';
 import SignInPage from "./Components/Authentication/SignInPage.js";
 import SignUpPage from "./Components/Authentication/SignUpPage.js";
 import { UserContext } from './Components/Context/UserContext'
+import ProjectsPage from "./pages/ProjectsPage.js";
 
 Amplify.configure(awsconfig);
 
@@ -85,11 +86,11 @@ function App() {
 							<ResumePage />
 						</Route>
 						<Route path="/projects" exact>
-							<ContactPage />
+							<ProjectsPage />
 						</Route>
-						<Route path="/papers" exact>
+						{/* <Route path="/papers" exact>
 							<ContactPage />
-						</Route>
+						</Route> */}
 						<Route path="/signin" exact>
 							<SignInPage onSignIn={onSignIn} />
 						</Route>

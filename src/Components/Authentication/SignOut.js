@@ -1,12 +1,36 @@
 import React, { useContext } from 'react';
 import  { Auth } from 'aws-amplify';
 import styled from 'styled-components'
-import { Button } from "@material-ui/core";
+//import { Button } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 import { UserContext } from '../Context/UserContext';
 
 const SignInStyled = styled.p`
-    margin: 10px; 
+    button {
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 2px;
+        width: 95px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: bold;
+        color: #606060;
+        background: #ffffff00;
+        border: 2px solid #606060;
+        box-shadow: 3px 3px 0 #606060,
+            -3px -3px 0 #606060,
+            -3px 3px 0 #606060,
+            3px -3px 0 #606060;
+        transition: 800ms ease-in-out;
+        text-align: center;
+    }       
+    button:hover {
+        box-shadow: 20px 5px 0 #606060, -20px -5px 0 #606060;
+    }
+    button:focus {
+        outline: none;
+    }
 `;
 
 const SignOut = () => {
@@ -24,9 +48,9 @@ const SignOut = () => {
     } 
     return (
         <SignInStyled>
-            { loggedIn ? (<Button onClick={signOut} variant="contained" color="primary">Sign Out</Button>
+            { loggedIn ? (<button onClick={signOut} >Sign Out</button>
 			) : (
-			<Link to="/signin"><Button variant="contained" color="primary">Sign In</Button></Link>)}
+			<Link to="/signin"><button>Sign In</button></Link>)}
         </SignInStyled>
     )
 }

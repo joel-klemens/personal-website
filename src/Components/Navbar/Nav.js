@@ -16,6 +16,7 @@ import SignOut from "../Authentication/SignOut";
 
 const NavStyled = styled.nav`
     display: flex;
+    align-items: center;
     height: 100%;
     width: 100%;
     /* .background-blur {
@@ -26,7 +27,7 @@ const NavStyled = styled.nav`
     } */
     .nav-logo{
         height: 53px;
-        width: 200px;
+        width: 273px;
         margin-top: 0px;
         img{
             width: 100%;
@@ -67,12 +68,12 @@ const NavStyled = styled.nav`
         }
     }
     .nav-items-right{
-        width: 200px;
         display: flex;
+        align-items: center;
+        flex-direction: row;
         justify-content: left;
         text-transform: uppercase;
         margin-top: 9px;
-        margin-right: 35px;
         .active-class{
             color: black;
             font-weight: 700;
@@ -92,7 +93,6 @@ const NavStyled = styled.nav`
                 transition: all .4s ease-in-out;
                 letter-spacing: 1px;
                 //margin: 10px;
-                margin-right: 30px;
                 font-weight: 600;
                 .icon{
                     //display: none;
@@ -114,7 +114,7 @@ class Nav extends Component{
                 </div>
                 <div className="nav-items">
                     <div>
-                        <NavLink to="/" activeClassName="active-class" exact><HomeIcon className="icon"/>Home</NavLink>
+                        <NavLink to="/" activeClassName="active-class" exact><HomeIcon className="icon"/>Home </NavLink>
                     </div>
                     {/* <p>
                         <NavLink to="/about" activeClassName="active-class" exact><InfoIcon className="icon"/>About</NavLink>
@@ -123,20 +123,22 @@ class Nav extends Component{
                         </Link>
                     </p> */}
                     <div>
-                        <NavLink to="/resume" activeClassName="active-class" exact><InfoIcon className="icon"/> Resume</NavLink>
+                        <NavLink to="/resume" activeClassName="active-class" exact><InfoIcon className="icon"/> Resume </NavLink>
                     </div>
                     <div>
-                        <NavLink to="/projects" activeClassName="active-class" exact><ListAltIcon className="icon"/> Projects</NavLink>
+                        <NavLink to="/projects" activeClassName="active-class" exact><ListAltIcon className="icon"/> Projects </NavLink>
                     </div>
-                    <div>
-                        <NavLink to="/papers" activeClassName="active-class" exact><ListAltIcon className="icon"/> Papers</NavLink>
-                    </div>
+                    {/* <div>
+                        <NavLink to="/papers" activeClassName="active-class" exact><ListAltIcon className="icon"/> Papers </NavLink>
+                    </div> */}
                 </div>
                 <div className="nav-items-right">
                     <div>
-                        <NavLink to="/contact" activeClassName="active-class" exact><PersonIcon className="icon"/>Contact</NavLink>
-                        <SignOut /> 
+                        <NavLink to="/contact" activeClassName="active-class" exact><PersonIcon className="icon"/> Contact </NavLink>
                     </div> 
+                    <div>
+                        <SignOut /> 
+                    </div>
                 </div>
             </NavStyled>
         )

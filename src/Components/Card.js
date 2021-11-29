@@ -1,19 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CardStyled = styled.header`
+const CardStyled = styled.div`
     height: 100%;
+    width: 40vw;
+    max-width: 40vw;
     .card-body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
         height: 100%;
         background: rgb(64 45 25 / 60%);
-        box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.25);
+        backdrop-filter: blur(4px);
+        box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.85);
         border-radius: 20px;
-        margin: 10px;
-        padding: 10px;
+        margin: 20px;
+        padding: 15px;
         .card-title{
             font-size: 40px;
             color: #f5c68b;
-            text-align: left;
+            text-align: center;
         }
         .card-description{
             font-size: 20px;
@@ -23,14 +30,46 @@ const CardStyled = styled.header`
             text-align: left;
             color: #f5c68b;
         }
+        .card-img {
+            align-self: center;
+            max-height: 100%;
+            max-width: 100%;
+            margin-top: 15px;
+            img {
+                border-radius: 5%;
+                max-height: 70vh;
+                max-width: 34vw;
+            }
+        }
+        .button {
+            align-self: center;
+            text-transform: uppercase;
+            margin: 10px;
+            margin-top: 15px;
+            padding: 2px;
+            width: 95px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            color: #f5c68b;
+            background: #ffffff00;
+            border: 2px solid #f5c68b;
+            box-shadow: 3px 3px 0 #f5c68b,
+                -3px -3px 0 #f5c68b,
+                -3px 3px 0 #f5c68b,
+                3px -3px 0 #f5c68b;
+            transition: 800ms ease-in-out;
+            text-align: center;
+        }       
+        .button:hover {
+            box-shadow: 20px 5px 0 #f5c68b, -20px -5px 0 #f5c68b;
+        }
+        .button:focus {
+            outline: none;
+        }
         @media screen and (max-width:1000px){
-            .card-title{
-                font-size: 24px;
-            }
-            .card-description{
-                margin-top: 0%;
-                font-size: 15px;;
-            }
+            
         }
     }
 `; 
@@ -40,10 +79,10 @@ const Card = ({title, img, imgDesc, desc, desc2, buttonLink, buttonTxt}) => {
         <CardStyled> 
             <div className="card-body">
                 <div className="card-title">
-                    <p>{title}</p>
+                    <h2>{title}</h2>
                 </div>
                 {img && (
-                    <div className="overflow">
+                    <div className="card-img">
                         <img src={img} alt={imgDesc} /> 
                     </div>
                 )}
