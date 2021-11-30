@@ -38,7 +38,7 @@ const SectionStyled = styled.header`
             }
         }
         .lower-third {
-            margin-bottom: 5%;
+            margin-bottom: 1%;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -88,7 +88,7 @@ const SectionStyled = styled.header`
             border: calc(var(--sizeX) / 10) solid var(--color);
             border-radius: 50px;
             box-sizing: border-box;
-            margin-bottom: 16px;
+            //margin-bottom: 16px;
         }
 
         .scrolldown::before {

@@ -16,7 +16,7 @@ const TitleStyled = styled.div`
         @media screen and (max-width: 370px){
             font-size: 2rem;
         }
-        &::before{
+        /* &::before{
             content: "";
             position: absolute;
             bottom: 0;
@@ -35,7 +35,7 @@ const TitleStyled = styled.div`
             background-color: var(--dark-jungle-green);
             border-radius: 15px;
             left: 0;
-        }
+        } */
         span{
             font-weight: 900;
             color: rgba(25,29,43,.05);
