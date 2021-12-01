@@ -141,8 +141,8 @@ class ContactPage extends React.Component {
         });
 
             //this is the full api call running locally uncomment when running on actual domain
-        //Axios.post('http://joelklemens.com/api/email', this.state)
-        Axios.post('http://localhost:3030/api/email', this.state)
+        Axios.post('http://joelklemens.com/api/email', this.state)
+        //Axios.post('http://localhost:3030/api/email', this.state)
             .then(res => {
                 //email sending logic 
                 if(res.data.success) {

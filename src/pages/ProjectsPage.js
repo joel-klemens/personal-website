@@ -77,7 +77,7 @@ function ProjectsPage() {
                         img={websitePic}
                         imgDesc="website login page"
                         desc="An ongoing project used for project blogs, networking, and resume purposes."
-                        desc2="Developed using React for the front end, AWS Amplify for API, database, and storage.  Utilizes Node.js client for routing contact emails."
+                        desc2="Developed using React for the front end, AWS Amplify for API, database, and storage.  Utilizes Node.js to create a small express webserver to route contact emails through sendgrid."
                         buttonLink="https://github.com/joel-klemens/personal-website"
                         buttonTxt="Code"
                     />
