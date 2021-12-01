@@ -1,10 +1,7 @@
 //@ts-check
-
-import React, { Component } from "react"
+import React from "react"
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
-//import {Link} from 'react-scroll'
-//logo image
 import logo from '../../images/logo.png'
 //icons
 import HomeIcon from '@material-ui/icons/Home';
@@ -14,17 +11,15 @@ import PersonIcon from '@material-ui/icons/Person';
 //siging in and out 
 import SignOut from "../Authentication/SignOut";
 
-const NavStyled = styled.nav`
+
+const NavigationStyled = styled.div`
     display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    /* .background-blur {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        filter: blur(8px); 
-    } */
+    height: 100vh;
+    width: 300px;
+    //border-right: 1px solid var(--border-color);
     .nav-logo{
         height: 53px;
         width: 273px;
@@ -34,9 +29,12 @@ const NavStyled = styled.nav`
         }
     }
     .nav-items{
+        color: black;
         flex: 1;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
         margin: 10px;
         margin-top: 20px;
         .active-class{
@@ -54,10 +52,11 @@ const NavStyled = styled.nav`
                 letter-spacing: 1px;
                 margin: 10px;
                 font-weight: 600;
+                font-size: 2em;
                 .icon{
                     //display: none;
                     margin-right: 5px;
-                    vertical-align: sub;
+                    //vertical-align: sub;
                 }
             }
             a:hover::before{
@@ -67,49 +66,12 @@ const NavStyled = styled.nav`
             
         }
     }
-    .nav-items-right{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: left;
-        text-transform: uppercase;
-        margin-top: 9px;
-        .active-class{
-            color: black;
-            font-weight: 700;
-            border-radius: 28px;
-            background-color: rgba(0,0,0,0.2);
-            padding: 7px;
-            padding-top: 9px;
-        }
-        div{
-            text-transform: uppercase;
-            transition: all .4s ease-in-out;
-            letter-spacing: 1px;
-            margin: 10px;
-            font-weight: 600;
-            a{
-                text-transform: uppercase;
-                transition: all .4s ease-in-out;
-                letter-spacing: 1px;
-                //margin: 10px;
-                font-weight: 600;
-                .icon{
-                    //display: none;
-                    margin-right: 5px;
-                    vertical-align: sub;
-                }
-            }
-        }
-    }
 `;
 
-
-class NavTop extends Component{
-    render() {
-        return (
-            <NavStyled>
-                <div className="nav-logo">
+function BurgerMenu() {
+    return (
+        <NavigationStyled>
+            <div className="nav-logo">
                 <NavLink to="/"exact><img src={logo} alt="Joel Klemens Logo"/></NavLink>
                 </div>
                 <div className="nav-items">
@@ -131,8 +93,6 @@ class NavTop extends Component{
                     {/* <div>
                         <NavLink to="/papers" activeClassName="active-class" exact><ListAltIcon className="icon"/> Papers </NavLink>
                     </div> */}
-                </div>
-                <div className="nav-items-right">
                     <div>
                         <NavLink to="/contact" activeClassName="active-class" exact><PersonIcon className="icon"/> Contact </NavLink>
                     </div> 
@@ -140,8 +100,7 @@ class NavTop extends Component{
                         <SignOut /> 
                     </div>
                 </div>
-            </NavStyled>
-        )
-    }
+        </NavigationStyled>
+    )
 }
-export default NavTop;
+export default BurgerMenu;

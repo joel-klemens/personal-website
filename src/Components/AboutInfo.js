@@ -1,29 +1,29 @@
-import React from 'react'
-import styled from 'styled-components';
-import Card from './Card';
-import ReactCardFlip from 'react-card-flip';
+import React from "react";
+import styled from "styled-components";
+//import Card from "./Card";
+//import ReactCardFlip from "react-card-flip";
 
 const AboutInfoStyled = styled.div`
     width: 99.1vw;
     margin-top: 5%;
     margin-left: 10px;
     display: flex;
-    .card{
+    .card {
         height: 50vh;
         width: 32vw;
     }
-    .card-back{
+    .card-back {
         height: 50vh;
         width: 32vw;
     }
-    :after{
-        content:"";
+    :after {
+        content: "";
         display: table;
         clear: both;
     }
-    @media screen and (max-width:1000px){
+    @media screen and (max-width: 1000px) {
         flex-direction: column;
-        .card{
+        .card {
             height: 22vh;
             margin-bottom: 5px;
             width: 100%;
@@ -34,21 +34,56 @@ const AboutInfoStyled = styled.div`
 class AboutInfo extends React.Component {
     constructor() {
         super();
-            this.state = {
-                isFlipped: false
+        this.state = {
+            isFlipped: false,
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(e) {
         e.preventDefault();
-        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+        this.setState((prevState) => ({ isFlipped: !prevState.isFlipped }));
     }
 
     render() {
         return (
             <AboutInfoStyled>
-                <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                <div className="about-section">
+                    <p>
+                        After graduating from the University of Guelph in 2019,
+                        I began my career in various support and implementation
+                        roles, however, I was quickly promoted and completed my
+                        goal of becoming a Junior Developer. My primary function
+                        was to complete development level support tickets that
+                        required debugging and problem-solving a leading
+                        Corporate Wellness Software Platform which is used daily
+                        by thousands globally. I worked with UI/UX designers to
+                        create web pages using HTML, CSS, and JavaScript for the
+                        Corporate marketing website. Other languages I used
+                        frequently were jQuery and Kendo tools for
+                        client-specific theme development as well as C#,
+                        Typescript, and SQL to complete platform bug fixes,
+                        change requests, and updates.
+                    </p>
+                    <p>
+                        Each day I seek to enhance my knowledge of software
+                        development by initiating my own projects with
+                        enthusiasm and energy. I am known for getting involved,
+                        demonstrating leadership, being dependable, and
+                        hardworking. My ability to effectively manage my time
+                        allows for a balance between professional development,
+                        athletics, social life, and volunteering.
+                    </p>
+                    <p>
+                        In my free time, I stay very active and continually look
+                        for new physical challenges. Currently, I am working
+                        towards completing a marathon, look me up on Strava if
+                        you would like to follow my progress! I also enjoy
+                        backcountry camping, rock climbing, and hiking.
+                    </p>
+                </div>
+
+                {/* <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                     <div className="card" onClick={this.handleClick}>
                         <Card
                             title="Education"
@@ -101,9 +136,9 @@ class AboutInfo extends React.Component {
                             desc="In my free time, I like to stay very active participating in many different activities including running, cycling and golf. I also like to take trips backcountry camping and rock climbing."
                         />
                     </div>
-                </ReactCardFlip>
+                </ReactCardFlip> */}
             </AboutInfoStyled>
-        )
+        );
     }
 }
 

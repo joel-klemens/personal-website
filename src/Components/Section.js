@@ -185,12 +185,14 @@ const section = ({sectionID, title, desc, backgroundimg, first, gitHubLinkedIn, 
                         >
                             <GithubIcon />
                         </a>
-                        <div className="scrolldown">
-                            <div className="chevrons">
-                                <div className="chevrondown"></div>
-                                <div className="chevrondown"></div>
+                        { first && (
+                            <div className="scrolldown">
+                                <div className="chevrons">
+                                    <div className="chevrondown"></div>
+                                    <div className="chevrondown"></div>
+                                </div>
                             </div>
-                        </div>
+                        )} 
                         <a
                             href="https://www.linkedin.com/in/joel-klemens"
                             className="link-icon i-linkedin section-buttons"

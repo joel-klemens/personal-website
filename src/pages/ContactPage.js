@@ -1,13 +1,13 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 //import ContactItem from '../Components/ContactItem';
 //import PhoneIcon from '@material-ui/icons/Phone';
 //import EmailIcon from '@material-ui/icons/Email';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import Title from '../Components/Title'
 //for accessing api to send emails 
-import Axios from 'axios';
+import Axios from 'axios'
 
 const ContactPageStyled = styled.section`
     padding: 6rem;
@@ -78,6 +78,17 @@ const ContactPageStyled = styled.section`
         button:focus {
             outline: none;
         }
+        .d-inline {
+            align-self: center;
+            font-weight: bolder;
+            font-size: 1.5em;
+        }
+        .success-msg {
+            color: green; 
+        }
+        .err-msg {
+            color: red; 
+        }
     }
 `;
 
@@ -106,7 +117,8 @@ class ContactPage extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log(event.target);
+        //console.log(event.target);
+
 
         this.setState({
             disabled: true
@@ -120,7 +132,10 @@ class ContactPage extends React.Component {
                 if(res.data.success) {
                     this.setState({
                         disabled: false,
-                        emailSent: true
+                        emailSent: true,
+                        name: '',
+                        email:'',
+                        message:''
                     });
                 } else {
                     this.setState({
@@ -154,7 +169,7 @@ class ContactPage extends React.Component {
                         </Form.Group>
                         <Form.Group>
                             <Form.Label htmlFor="message">Message</Form.Label>
-                            <Form.Control id="message" name="message" as="textarea"rows="3" value={this.state.message} onChange={this.handleChange} />
+                            <Form.Control id="message" name="message" as="textarea"rows="4" value={this.state.message} onChange={this.handleChange} />
                         </Form.Group>
                         <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
                             Send
