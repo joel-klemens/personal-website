@@ -86,6 +86,11 @@ const SignInStyled = styled.div`
     p.invalid-user {
         color: red;
     }
+    @media screen and (max-width: 600px){
+        .signin {    
+            width: 360px;
+        }
+    }
 `; 
 
 const SignIn = ({ onSignIn }) => {

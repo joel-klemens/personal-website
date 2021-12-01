@@ -18,7 +18,7 @@ const NavigationStyled = styled.div`
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    width: 300px;
+    width: 280px;
     //border-right: 1px solid var(--border-color);
     .nav-logo{
         height: 53px;

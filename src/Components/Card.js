@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const CardStyled = styled.div`
     height: 100%;
-    width: 40vw;
-    max-width: 40vw;
+    width: 50%;
+    max-width: 50vw;
     .card-body{
         display: flex;
         flex-direction: column;
@@ -68,9 +68,11 @@ const CardStyled = styled.div`
         .button:focus {
             outline: none;
         }
-        @media screen and (max-width:1000px){
-            
-        }
+    }
+    @media screen and (max-width:1000px){
+        height: 100%;
+        width: 90%;
+        max-width: 90vw;
     }
 `; 
 

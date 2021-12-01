@@ -136,6 +136,17 @@ const SignUpStyled = styled.div`
     .no-match {
         color: red; 
     }
+    @media screen and (max-width: 600px){
+        .signUp {
+            width: 360px;
+        }
+        .verify {
+            width: 360px;
+        }
+        .verified {
+            width: 360px;
+        }
+    }
 `; 
 
 const SignUp = () => {

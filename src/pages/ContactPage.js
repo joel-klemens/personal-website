@@ -21,6 +21,7 @@ const ContactPageStyled = styled.section`
 
     .contact-item-section{
         form {
+            margin: 10px;
             height: 520px;
             width: 800px;
             //background-color: rgba(255, 255, 255, 0.13);
@@ -88,6 +89,21 @@ const ContactPageStyled = styled.section`
         }
         .err-msg {
             color: red; 
+        }
+    }
+    @media screen and (max-width: 830px){
+        h2 {
+            text-align: center; 
+        }
+        .contact-item-section form {
+            margin-top: 40px;
+            width: 85%;
+            height: 70%;
+        }
+    }
+    @media screen and (max-width: 830px){
+        h2 {
+            font-size: 2.5rem;
         }
     }
 `;
