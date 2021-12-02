@@ -1,5 +1,5 @@
 import React from 'react';
-import resumePDF from '../PDF/Joel_Klemens_Resume.pdf';
+import resumePDF from './Joel_Klemens_Resume.pdf';
 import styled from 'styled-components';
 //import Title from '../Components/Title'
 //import bgndImg from '../images/hike-fernie-top.jpg';

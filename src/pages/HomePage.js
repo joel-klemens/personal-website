@@ -5,7 +5,13 @@ import Section from '../Components/Section';
 import surfSunset from '../images/surf-sunset-2.JPG.png';
 
 const HomePageStyled = styled.header`
-
+    @media screen and (max-width: 600px){
+        .section-container {
+            .lower-third {
+                margin-bottom: 41%;
+            }
+        }
+    }
 `;
 
 function HomePage() {
