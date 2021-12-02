@@ -1,5 +1,5 @@
 import React from 'react';
-import resumePDF from './Joel_Klemens_Resume.pdf';
+//import resumePDF from './Joel_Klemens_Resume.pdf';
 import styled from 'styled-components';
 //import Title from '../Components/Title'
 //import bgndImg from '../images/hike-fernie-top.jpg';
@@ -81,7 +81,7 @@ function ResumePage() {
             {/* <Resume /> */}
             <div className="resume-holder">
                 <h1 className="page-title">My Resume</h1> 
-                <a href={resumePDF}>Download</a>
+                <a href="joelklemens.com/Joel_Klemens_Resume.pdf">Download</a>
                 <img src={resumeImg} alt="resume, use download button for screen reader accessibility"></img>
             </div>
         </ResumeStyled>
