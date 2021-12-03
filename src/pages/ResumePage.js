@@ -1,9 +1,10 @@
-import React from 'react';
-//import resumePDF from './Joel_Klemens_Resume.pdf';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+//import resumePDF from '../../public/Joel_Klemens_Resume.pdf';
+import styled from "styled-components";
 //import Title from '../Components/Title'
 //import bgndImg from '../images/hike-fernie-top.jpg';
-import resumeImg from "../images/resume-img.png"
+import resumeImg from "../images/resume-img.png";
 
 const ResumeStyled = styled.div`
     padding: 6rem;
@@ -21,7 +22,7 @@ const ResumeStyled = styled.div`
         flex-wrap: nowrap;
         align-items: center;
         margin-top: 2%;
-        
+
         img {
             width: 100%;
             box-shadow: 5px 5px 10px 10px #747474;
@@ -36,13 +37,11 @@ const ResumeStyled = styled.div`
             color: #425154;
             background: #c1a471;
             border: 2px solid #425154;
-            box-shadow: 5px 5px 0 #425154,
-                -5px -5px 0 #425154,
-                -5px 5px 0 #425154,
-                5px -5px 0 #425154;
+            box-shadow: 5px 5px 0 #425154, -5px -5px 0 #425154,
+                -5px 5px 0 #425154, 5px -5px 0 #425154;
             transition: 500ms ease-in-out;
             text-align: center;
-        }       
+        }
         a:hover {
             box-shadow: 20px 5px 0 #425154, -20px -5px 0 #425154;
         }
@@ -51,7 +50,7 @@ const ResumeStyled = styled.div`
         }
     }
     .page-title {
-        display:none; 
+        display: none;
     }
     @media screen and (max-width: 1200px) {
         padding: 4rem;
@@ -61,7 +60,7 @@ const ResumeStyled = styled.div`
     }
     @media screen and (max-width: 1000px) {
         .page-title {
-            display: inline; 
+            display: inline;
         }
         .resume-holder {
             margin-top: 0;
@@ -76,16 +75,20 @@ const ResumeStyled = styled.div`
 `;
 
 function ResumePage() {
+    //const result = await Storage.get("Joel_Klemens_Resume.pdf", { download: true });
     return (
-        <ResumeStyled> 
+        <ResumeStyled>
             {/* <Resume /> */}
             <div className="resume-holder">
-                <h1 className="page-title">My Resume</h1> 
-                <a href="joelklemens.com/Joel_Klemens_Resume.pdf">Download</a>
-                <img src={resumeImg} alt="resume, use download button for screen reader accessibility"></img>
+                <h1 className="page-title">My Resume</h1>
+                {/* <Link href={require("../PDF/Joel_Klemens_Resume.pdf")} target="blank" >Download</Link> */}
+                <img
+                    src={resumeImg}
+                    alt="resume, use download button for screen reader accessibility"
+                ></img>
             </div>
         </ResumeStyled>
-    )
+    );
 }
 
-export default ResumePage
+export default ResumePage;

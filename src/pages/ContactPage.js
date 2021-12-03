@@ -20,6 +20,7 @@ const ContactPageStyled = styled.section`
     background-size: cover;
 
     .contact-item-section{
+        margin: 1px;
         form {
             margin: 10px;
             height: 520px;
@@ -27,7 +28,7 @@ const ContactPageStyled = styled.section`
             //background-color: rgba(255, 255, 255, 0.13);
             position: absolute;
             transform: translate(-50%, -50%);
-            top: 50%;
+            top: 60%;
             left: 50%;
             border-radius: 10px;
             backdrop-filter: blur(8px);
