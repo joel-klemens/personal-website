@@ -81,6 +81,7 @@ function ResumePage() {
             {/* <Resume /> */}
             <div className="resume-holder">
                 <h1 className="page-title">My Resume</h1>
+                <a href="/Joel_Klemens_Resume.pdf" download>Download</a> 
                 {/* <Link href={require("../PDF/Joel_Klemens_Resume.pdf")} target="blank" >Download</Link> */}
                 <img
                     src={resumeImg}
