@@ -10,11 +10,6 @@
       "StackName": "amplify-personalwebsite-dev-175832",
       "StackId": "arn:aws:cloudformation:us-west-2:449199386639:stack/amplify-personalwebsite-dev-175832/d6106c10-3f65-11ec-862f-0a1536dfad5f",
       "AmplifyAppId": "d3nq74fcecubr3"
-    },
-    "categories": {
-      "auth": {
-        "personalwebsited1f6274c": {}
-      }
     }
   }
 }
