@@ -1,0 +1,16 @@
+{
+  "resourceName": "s3906fe481",
+  "policyUUID": "906fe481",
+  "bucketName": "personalwebsitea15c6026e2e54823ace79c83ea1a0814",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
