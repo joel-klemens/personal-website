@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //import resumePDF from '../../public/Joel_Klemens_Resume.pdf';
-import resumePDF from '../PDF/JoelKlemensResume.pdf';
+//import resumePDF from '../PDF/JoelKlemensResume.pdf';
 import styled from "styled-components";
 //import Title from '../Components/Title'
 //import bgndImg from '../images/hike-fernie-top.jpg';
@@ -82,7 +82,7 @@ function ResumePage() {
             {/* <Resume /> */}
             <div className="resume-holder">
                 <h1 className="page-title">My Resume</h1>
-                <a href={resumePDF} download>Download</a> 
+                <a href={"/JoelKlemensResume.pdf"} download>Download</a> 
                 {/* <Link href={require("../PDF/Joel_Klemens_Resume.pdf")} target="blank" >Download</Link> */}
                 <img
                     src={resumeImg}
