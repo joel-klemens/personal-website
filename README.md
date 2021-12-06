@@ -1,12 +1,17 @@
 # Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio website project to be used for resume purposes, showing off projects and networking.  
+
+Created using:
+-React for the front end
+-Node.js express server to route emails from the contact me page 
+-AWS Amplify for storage, API and authentication
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
