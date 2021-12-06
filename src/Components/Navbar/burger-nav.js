@@ -67,10 +67,9 @@ const NavigationStyled = styled.div`
         }
     }
 `;
-
-function BurgerMenu() {
+const BurgerMenu = ({onClick}) => {
     return (
-        <NavigationStyled>
+        <NavigationStyled onClick={onClick}>
             <div className="nav-logo">
                 <NavLink to="/"exact><img src={logo} alt="Joel Klemens Logo"/></NavLink>
                 </div>

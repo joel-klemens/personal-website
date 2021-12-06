@@ -32,9 +32,16 @@ const SectionStyled = styled.header`
             color: black;
             align-items: center;
             flex: 1;
+            p {
+                font-family: 'Sriracha', cursive;
+            }
             .section-description {
-                font-weight: 500;
-                font-size: 20px;
+                p{
+                    font-weight: 500;
+                    font-size: 20px;
+                    font-family: 'Press Start 2P', cursive;
+                }
+                
             }
         }
         .lower-third {

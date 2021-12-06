@@ -53,7 +53,7 @@ function TopNavBar() {
             <div className="burger-menu">
                 { burger ? <CloseIcon onClick={handleBurger}/> : <MenuIcon onClick={handleBurger} /> } 
             </div>
-            {burger ? <BurgerMenu /> : <></>}
+            {burger ? <BurgerMenu  onClick={handleBurger}/> : <></>} 
         </TopNavBarStyled>
     )
 }

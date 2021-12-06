@@ -77,7 +77,11 @@ class AboutPage extends Component{
                             After graduating from the University of Guelph in 2019,
                             I began my career in various support and implementation
                             roles, however, I was quickly promoted and completed my
-                            goal of becoming a Junior Developer. My primary function
+                            goal of becoming a Junior Developer.
+                        </p>
+                        <br /> 
+                        <p>
+                            My primary function
                             was to complete development level support tickets that
                             required debugging and problem-solving a leading
                             Corporate Wellness Software Platform which is used daily

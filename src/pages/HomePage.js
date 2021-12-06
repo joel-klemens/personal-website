@@ -20,8 +20,8 @@ function HomePage() {
             {/* home */}
             <Section 
                 sectionID="home"
-                title="Welcome to my site"
-                desc="Scroll down to find more"
+                title="Hi, I'm Joel"
+                desc="Software Developer"
                 backgroundimg={surfSunset}
                 first
                 mePointer
