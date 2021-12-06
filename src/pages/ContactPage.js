@@ -6,12 +6,13 @@ import styled from 'styled-components'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Title from '../Components/Title'
+import ParticlesBG from "../Components/Particles-bg";
 //for accessing api to send emails 
 import Axios from 'axios'
 
 const ContactPageStyled = styled.section`
     padding: 6rem;
-    background: linear-gradient(to bottom, #8e7b87 35%, #ffa96e 150%);
+    //background: linear-gradient(to bottom, #8e7b87 35%, #ffa96e 150%);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -141,13 +142,9 @@ class ContactPage extends React.Component {
             [name]: value
         })
     }
-
     handleSubmit = (event) => {
         event.preventDefault();
-
         //console.log(event.target);
-
-
         this.setState({
             disabled: true
         });
@@ -183,75 +180,34 @@ class ContactPage extends React.Component {
 
     render() {
         return(
-            <ContactPageStyled>
-                <Title title={'Contact Me'} span={'Contact Me'} />
-                <div className="contact-item-section">
-                    <Form onSubmit={this.handleSubmit}>
-                        <Form.Group>
-                            <Form.Label htmlFor="full-name">Full Name</Form.Label>
-                            <Form.Control id="full-name" name="name" type="text" required value={this.state.name} onChange={this.handleChange} />
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Label htmlFor="email">Email</Form.Label>
-                            <Form.Control id="email" name="email" type="email" required value={this.state.email} onChange={this.handleChange} />
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Label htmlFor="message">Message</Form.Label>
-                            <Form.Control id="message" name="message" as="textarea" rows="4" required value={this.state.message} onChange={this.handleChange} />
-                        </Form.Group>
-                        <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
-                            Send
-                        </Button>
-                        {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-                        {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
-                    </Form>
-                </div>
-            </ContactPageStyled>
+            <>
+                <ParticlesBG />
+                <ContactPageStyled>
+                    <Title title={'Contact Me'} span={'Contact'} />
+                    <div className="contact-item-section">
+                        <Form onSubmit={this.handleSubmit}>
+                            <Form.Group>
+                                <Form.Label htmlFor="full-name">Full Name</Form.Label>
+                                <Form.Control id="full-name" name="name" type="text" required value={this.state.name} onChange={this.handleChange} />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor="email">Email</Form.Label>
+                                <Form.Control id="email" name="email" type="email" required value={this.state.email} onChange={this.handleChange} />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label htmlFor="message">Message</Form.Label>
+                                <Form.Control id="message" name="message" as="textarea" rows="4" required value={this.state.message} onChange={this.handleChange} />
+                            </Form.Group>
+                            <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
+                                Send
+                            </Button>
+                            {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
+                            {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
+                        </Form>
+                    </div>
+                </ContactPageStyled>
+            </>
         )
     }
 }
-
-
-
-
-//     render() {
-//         return(
-//             <div>
-//                 <Hero title={this.props.title} />
-
-//                 <Content>
-//                     <Form onSubmit={this.handleSubmit}>
-//                         <Form.Group>
-//                             <Form.Label htmlFor="full-name">Full Name</Form.Label>
-//                             <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
-//                         </Form.Group>
-
-
-//                         <Form.Group>
-//                             <Form.Label htmlFor="email">Email</Form.Label>
-//                             <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
-//                         </Form.Group>
-
-
-//                         <Form.Group>
-//                             <Form.Label htmlFor="message">Message</Form.Label>
-//                             <Form.Control id="message" name="message" as="textarea"rows="3" value={this.state.message} onChange={this.handleChange} />
-//                         </Form.Group>
-
-
-//                         <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
-//                             Send
-//                         </Button>
-
-
-//                         {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-//                         {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
-//                     </Form>
-//                 </Content>
-//             </div>
-//         );
-//     }
-
-// }
-
 export default ContactPage;
