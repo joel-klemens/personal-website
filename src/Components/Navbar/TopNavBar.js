@@ -42,9 +42,8 @@ function TopNavBar() {
     const [burger, setBurger] = useState(false)
 
     const handleBurger = () => {
-        //console.log('Signed in...')
         setBurger(!burger) 
-        console.log("Burger: ", burger)
+        //console.log("Burger: ", burger)
     }
 
     return (

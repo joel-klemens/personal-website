@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styled from 'styled-components';
-import Section from '../Components/Section'; 
+//import Section from '../Components/Section'; 
 //images
 import fernieTop from '../images/hike-fernie-top.jpg';
 
