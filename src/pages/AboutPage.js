@@ -16,19 +16,19 @@ const AboutStyled = styled.div`
     scroll-snap-align: start;
     .about-section {
         margin: 20px;
-        height: 80%;
+        height: 85%;
         width: 800px;
         background-color: rgba(255, 255, 255, 0.36);
         border-radius: 10px;
         backdrop-filter: blur(8px);
         border: 2px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-        padding: 50px 35px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         align-content: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: stretch;
         h2 {
             color: black;
@@ -40,11 +40,12 @@ const AboutStyled = styled.div`
             color: black;
             font-weight: bold;
             font-size: 1.2em;
+            line-height: 150%;
         }
     }
     @media screen and (max-width: 730px){
         .about-section {
-            height: auto;
+            height: 80%;
             padding: 5px;
             backdrop-filter: none;
             background-color: rgba(255, 255, 255, 0.75);
@@ -55,11 +56,18 @@ const AboutStyled = styled.div`
     }
     @media screen and (max-width: 450px){
         .about-section {
-            height: auto;
+            height: 90%;
             padding: 5px;
 
             p {
                 font-size: 0.75em;
+            }
+        }
+    }
+    @media screen and (max-width: 360px){
+        .about-section {
+            p {
+                font-size: 0.65em;
             }
         }
     }
@@ -78,8 +86,7 @@ class AboutPage extends Component{
                             I began my career in various support and implementation
                             roles, however, I was quickly promoted and completed my
                             goal of becoming a Junior Developer.
-                        </p>
-                        <br /> 
+                        </p> 
                         <p>
                             My primary function
                             was to complete development level support tickets that
@@ -92,8 +99,7 @@ class AboutPage extends Component{
                             client-specific theme development as well as C#,
                             Typescript, and SQL to complete platform bug fixes,
                             change requests, and updates.
-                        </p>
-                        <br /> 
+                        </p> 
                         <p>
                             Each day I seek to enhance my knowledge of software
                             development by initiating my own projects with
@@ -102,8 +108,7 @@ class AboutPage extends Component{
                             hardworking. My ability to effectively manage my time
                             allows for a balance between professional development,
                             athletics, social life, and volunteering.
-                        </p>
-                        <br /> 
+                        </p> 
                         <p>
                             In my free time, I stay very active and continually look
                             for new physical challenges. Currently, I am working

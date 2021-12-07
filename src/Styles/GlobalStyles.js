@@ -84,7 +84,7 @@ $gradient-radial: radial-gradient(#c8ccacff, #232720ff, #dee5f7ff, #d4dd9fff, #2
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Monsterrat', sans-serif;
+    font-family: 'Sriracha', cursive;
 }
 html, body {
     overflow-x: hidden;

@@ -64,6 +64,7 @@ const SectionStyled = styled.header`
             transition: all 0.4s ease-in-out;
             cursor: pointer;
             color: black;
+            display: flex;
             &:hover {
                 border: 2px solid black;
                 color: black;
@@ -207,35 +208,6 @@ const section = ({sectionID, title, desc, backgroundimg, first, gitHubLinkedIn, 
                             <LinkedInIcon />
                         </a>
                     </div>
-                    {/* <div className="lower-third">
-                        <div className="section-buttons">
-                            {gitHubLinkedIn && (
-                                <div className="link-icons">
-                                    <a
-                                        href="https://github.com/joel-klemens"
-                                        className="link-icon i-github"
-                                    >
-                                        <GithubIcon />
-                                    </a>
-                                    <a
-                                        href="https://www.linkedin.com/in/joel-klemens"
-                                        className="link-icon i-linkedin"
-                                    >
-                                        <LinkedInIcon />
-                                    </a>
-                                    /* If this is the first section on the page
-                                    first && (
-                                        <div className="scrolldown">
-                                            <div className="chevrons">
-                                                <div className="chevrondown"></div>
-                                                <div className="chevrondown"></div>
-                                            </div>
-                                        </div>
-                                    )
-                                </div>
-                            )
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </SectionStyled>

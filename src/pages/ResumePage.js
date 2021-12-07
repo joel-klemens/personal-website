@@ -26,7 +26,6 @@ const ResumeStyled = styled.div`
         a {
             margin: 20px;
             width: 150px;
-            height: 30px;
             cursor: pointer;
             font-size: 20px;
             font-weight: bold;
