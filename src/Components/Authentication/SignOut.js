@@ -11,7 +11,6 @@ const SignInStyled = styled.p`
         margin: 10px;
         padding: 2px;
         width: 95px;
-        height: 30px;
         cursor: pointer;
         font-size: 17px;
         font-weight: bold;

@@ -29,6 +29,8 @@ const NavStyled = styled.nav`
         height: 53px;
         width: 273px;
         margin-top: 0px;
+        display: flex;
+        align-items: center;
         img{
             width: 100%;
         }
@@ -46,6 +48,7 @@ const NavStyled = styled.nav`
             background-color: rgba(0,0,0,0.2);
             padding: 7px;
             padding-top: 9px;
+            padding-right: 10px;
         }
         div{
             a{
@@ -81,6 +84,7 @@ const NavStyled = styled.nav`
             background-color: rgba(0,0,0,0.2);
             padding: 7px;
             padding-top: 9px;
+            padding-right: 10px;
         }
         div{
             text-transform: uppercase;
