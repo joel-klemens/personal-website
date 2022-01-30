@@ -1,11 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import ParticlesBGFloat from '../Components/Particles-bg-float';
-import Card from '../Components/Card';
-import syncronicity from '../images/login_page_sync.png'
-import websitePic from '../images/website-screenshot.png'
-import fitpoints from '../images/fitpoints.png'
-import todoreact from '../images/to-do-react.png'
+import React from "react";
+import styled from "styled-components";
+import ParticlesBGFloat from "../Components/Particles-bg-float";
+import Card from "../Components/Card";
+import syncronicity from "../images/login_page_sync.png";
+import websitePic from "../images/website-screenshot.png";
+import fitpoints from "../images/fitpoints.png";
+import todoreact from "../images/to-do-react.png";
+import joelMovieDb from "../images/joelmoviedb.jpg";
 
 const ProjectsStyled = styled.div`
     padding: 3rem;
@@ -18,36 +19,36 @@ const ProjectsStyled = styled.div`
         flex-wrap: wrap;
         justify-content: center;
     }
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1200px) {
         .card-title {
-            h2{
+            h2 {
                 font-size: 3rem;
             }
         }
     }
-    @media screen and (max-width: 1000px){
+    @media screen and (max-width: 1000px) {
         padding: 2rem;
         .projects-row {
             flex-direction: column;
             align-items: center;
         }
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
         padding: 1.5rem;
         .projects-row {
             h2 {
-                font-size: 2rem;;
+                font-size: 2rem;
             }
             p {
                 font-size: 1rem;
             }
         }
     }
-    @media screen and (max-width: 420px){
+    @media screen and (max-width: 420px) {
         padding: 1rem;
         .projects-row {
             h2 {
-                font-size: 1.5rem;;
+                font-size: 1.5rem;
             }
             p {
                 font-size: 1rem;
@@ -62,6 +63,15 @@ function ProjectsPage() {
             <ParticlesBGFloat />
             <ProjectsStyled>
                 <div className="projects-row">
+                    <Card
+                        title="Joel Movie Database"
+                        img={joelMovieDb}
+                        imgDesc="Home page of Joel Movie Database"
+                        desc="This project untilizes the OMDB API to search for movies. The results of the search will display a poster, title, year and type (ie. Movie, Series, game...) To run this project you will need to obtain an API key from OMDB (http://www.omdbapi.com/)."
+                        desc2="When you type a query and search the 8 best matches will be shown. This can include movies, tv shows and video games."
+                        buttonLink="https://github.com/joel-klemens/joel-movie-db"
+                        buttonTxt="Code"
+                    />
                     <Card
                         title="Syncronicity"
                         img={syncronicity}
@@ -107,4 +117,4 @@ function ProjectsPage() {
     );
 }
 
-export default ProjectsPage
+export default ProjectsPage;
