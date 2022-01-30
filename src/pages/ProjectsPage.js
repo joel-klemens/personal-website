@@ -7,6 +7,7 @@ import websitePic from "../images/website-screenshot.png";
 import fitpoints from "../images/fitpoints.png";
 import todoreact from "../images/to-do-react.png";
 import joelMovieDb from "../images/joelmoviedb.jpg";
+import imageClassifier from "../images/imageClassifier.png";
 
 const ProjectsStyled = styled.div`
     padding: 3rem;
@@ -70,6 +71,15 @@ function ProjectsPage() {
                         desc="This project untilizes the OMDB API to search for movies. The results of the search will display a poster, title, year and type (ie. Movie, Series, game...) To run this project you will need to obtain an API key from OMDB (http://www.omdbapi.com/)."
                         desc2="When you type a query and search the 8 best matches will be shown. This can include movies, tv shows and video games."
                         buttonLink="https://github.com/joel-klemens/joel-movie-db"
+                        buttonTxt="Code"
+                    />
+                    <Card
+                        title="AI Image Classifier"
+                        img={imageClassifier}
+                        imgDesc="28x28 grayscale image of dress"
+                        desc="TensorFlow Image Classifier Application using the Keras Fashion MNIST dataset."
+                        desc2="This is a dataset of 60,000 28x28 grayscale images of 10 fashion categories, along with a test set of 10,000 images. This dataset can be used as a drop-in replacement for MNIST."
+                        buttonLink="https://github.com/joel-klemens/ImageClassifier"
                         buttonTxt="Code"
                     />
                     <Card
