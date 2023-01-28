@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import styled from 'styled-components';
-//import Section from '../Components/Section'; 
+import React, { Component } from "react";
+import styled from "styled-components";
+//import Section from '../Components/Section';
 //images
-import fernieTop from '../images/hike-fernie-top.jpg';
+import fernieTop from "../images/hike-fernie-top.jpg";
 
 const AboutStyled = styled.div`
     height: 100vh;
@@ -43,7 +43,7 @@ const AboutStyled = styled.div`
             line-height: 150%;
         }
     }
-    @media screen and (max-width: 730px){
+    @media screen and (max-width: 730px) {
         .about-section {
             height: 80%;
             padding: 5px;
@@ -54,7 +54,7 @@ const AboutStyled = styled.div`
             }
         }
     }
-    @media screen and (max-width: 450px){
+    @media screen and (max-width: 450px) {
         .about-section {
             height: 90%;
             padding: 5px;
@@ -64,22 +64,20 @@ const AboutStyled = styled.div`
             }
         }
     }
-    @media screen and (max-width: 360px){
+    @media screen and (max-width: 360px) {
         .about-section {
             p {
                 font-size: 0.65em;
             }
         }
     }
-    
 `;
 
-class AboutPage extends Component{
+class AboutPage extends Component {
     render() {
         return (
-            <AboutStyled 
-                style={{ backgroundImage: `url(${fernieTop})` }} >
-                    <div className="about-section" >
+            <AboutStyled style={{ backgroundImage: `url(${fernieTop})` }}>
+                {/* <div className="about-section" >
                         <h2>About me</h2>
                         <p>
                             After graduating from the University of Guelph in 2019,
@@ -116,7 +114,7 @@ class AboutPage extends Component{
                             you would like to follow my progress! I also enjoy
                             backcountry camping, rock climbing, and hiking.
                         </p>
-                    </div>
+                    </div> */}
                 {/* About */}
                 {/* <Section 
                     sectionID=""
@@ -134,8 +132,8 @@ class AboutPage extends Component{
                     //aboutMe
                     //first
                 /> */}
-            </AboutStyled >
-        )
+            </AboutStyled>
+        );
     }
 }
 
